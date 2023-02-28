@@ -2,7 +2,6 @@ import React, {FC, useEffect, useRef, useState} from "react";
 import {useAppDispatch} from "../app/hooks";
 import {addTodo} from "../features/todos/todosSlice";
 
-
 const AddTodoForm: FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -32,16 +31,20 @@ const AddTodoForm: FC = () => {
   };
 
   return (
-    <label>
+    <div className="flex justify-between flex-none h-fit">
       <input
-        placeholder='What needs to be done?'
+        className="w-full py-3 pl-12 pr-1 font-light text-xl text-slate-800 focus:outline-none placeholder-slate-400 placeholder:font-light placeholder:text-md placeholder:italic"
+        placeholder="What needs to be done?"
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={(e) => handleKeyDown(e)}
         ref={inputRef}
       />
-      <button onClick={handleSubmit}>Add todo</button>
-    </label>
+      <button
+        className="py-1 px-3 whitespace-nowrap border border-red-300 text-red-300 leading-normal transition duration-150 ease-in-out hover:border-red-400 hover:bg-neutral-400 hover:bg-opacity-10 hover:text-red-400  active:border-red-600 active:text-red-600"
+        type="button"
+        onClick={handleSubmit}>+ Add</button>
+    </div>
   );
 };
 
