@@ -1,4 +1,5 @@
-# Completed test task for Mindbox company - Todos App 
+# Todos App
+## Completed test task for Mindbox company 
 
 ### Link to the test task - [description](https://docs.google.com/document/d/1jq5yCrQJRHaRG4TabGhDITDMteYuLWG_LjlR9HmB5ac/edit)
 
@@ -12,13 +13,16 @@
 - Prettier
 - Husky
 
----
+## App Preview:
 
+![Todos App](./preview_images/appPreview.png "App Preview")
+
+---
 
 ## Setup
 
 ```bash
-git clone git@github.com:MikRyam/testTaskForRoox.git
+git clone git@github.com:MikRyam/todosApp.git
 
 npm install
 # or
@@ -33,7 +37,7 @@ npm run start
 yarn start
 ```
 
-## Other commands
+## Other available Scripts
 
 ```bash
 # run ESLint
@@ -41,6 +45,9 @@ yarn lint
 
 # run Prettier
 yarn format
+
+# run tests
+yarn test
 ```
 
 ## Bundle application
