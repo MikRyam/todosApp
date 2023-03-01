@@ -1,19 +1,15 @@
 import React, { FC } from 'react';
 import { useAppSelector } from '../app/hooks';
 import TodoItem from './TodoItem';
-import { RootState } from '../app/store';
+import { selectShowType, selectTodos } from '../app/selectors';
 
 const TodosList: FC = () => {
   const todosTypes = {
-    all: useAppSelector((state: RootState) => state.todos.todos),
-    active: useAppSelector((state: RootState) =>
-      state.todos.todos.filter((todo) => !todo.isCompleted),
-    ),
-    completed: useAppSelector((state: RootState) =>
-      state.todos.todos.filter((todo) => todo.isCompleted),
-    ),
+    all: useAppSelector(selectTodos),
+    active: useAppSelector(selectTodos).filter((todo) => !todo.isCompleted),
+    completed: useAppSelector(selectTodos).filter((todo) => todo.isCompleted),
   };
-  const showType = useAppSelector((state: RootState) => state.todos.show);
+  const showType = useAppSelector(selectShowType);
   const todos = todosTypes[showType];
 
   return (

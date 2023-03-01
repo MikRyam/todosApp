@@ -1,5 +1,19 @@
-public
-node_modules
+# compiled output
 /assets
+node_modules
+dist
+/.vscode
+.env
+*.env
 build
-index.jsx
+
+.idea
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*

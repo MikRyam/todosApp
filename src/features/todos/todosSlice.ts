@@ -5,7 +5,7 @@ import { ITodo } from '../../interfaces/todoInterface';
 
 export type showType = 'all' | 'active' | 'completed';
 
-interface TodosState {
+export interface TodosState {
   todos: ITodo[];
   show: showType;
 }
