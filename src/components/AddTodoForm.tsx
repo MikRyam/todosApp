@@ -1,13 +1,13 @@
-import React, {FC, useEffect, useRef, useState} from "react";
-import {useAppDispatch} from "../app/hooks";
-import {addTodo} from "../features/todos/todosSlice";
+import React, { FC, useEffect, useRef, useState } from 'react';
+import { useAppDispatch } from '../app/hooks';
+import { addTodo } from '../features/todos/todosSlice';
 
 const AddTodoForm: FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.focus()
+      inputRef.current.focus();
     }
   }, []);
 
@@ -19,7 +19,7 @@ const AddTodoForm: FC = () => {
       dispatch(addTodo(text));
       setText('');
       if (inputRef.current) {
-        inputRef.current.focus()
+        inputRef.current.focus();
       }
     }
   };
@@ -43,7 +43,10 @@ const AddTodoForm: FC = () => {
       <button
         className="py-1 px-3 whitespace-nowrap border border-red-300 text-red-300 leading-normal transition duration-150 ease-in-out hover:border-red-400 hover:bg-neutral-400 hover:bg-opacity-10 hover:text-red-400  active:border-red-600 active:text-red-600"
         type="button"
-        onClick={handleSubmit}>+ Add</button>
+        onClick={handleSubmit}
+      >
+        + Add
+      </button>
     </div>
   );
 };

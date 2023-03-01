@@ -13,7 +13,7 @@ li {
   gap: 0.5rem;
 }
 
-input:checked+span {
+input:checked + span {
   text-decoration: line-through;
 }
 
