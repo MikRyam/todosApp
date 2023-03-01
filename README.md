@@ -1,10 +1,10 @@
-# Todos App
-## Completed test task for Mindbox company 
+# Todos App 
+### Completed test task for Mindbox company 
 
 ### Link to the test task - [description](https://docs.google.com/document/d/1jq5yCrQJRHaRG4TabGhDITDMteYuLWG_LjlR9HmB5ac/edit)
 
 
-### Stack:
+## Stack:
 - React
 - TypeScript
 - Redux Toolkit
@@ -12,6 +12,7 @@
 - ESLint
 - Prettier
 - Husky
+
 
 ## App Preview:
 
