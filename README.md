@@ -24,6 +24,7 @@
 
 ```bash
 git clone git@github.com:MikRyam/todosApp.git
+cd todo
 
 npm install
 # or
@@ -38,7 +39,7 @@ npm run start
 yarn start
 ```
 
-## Other available Scripts
+## Other available scripts
 
 ```bash
 # run ESLint
